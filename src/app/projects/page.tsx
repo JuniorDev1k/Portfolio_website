@@ -57,6 +57,30 @@ const projects: Project[] = [
     githubUrl: "#",
     liveUrl: "#",
   },
+  {
+    id: "project4",
+    title: "Weather Forecast Dashboard",
+    description: "A dynamic weather forecasting tool",
+    longDescription:
+      "Engineered a weather dashboard that provides real-time weather data and forecasts. Integrated with multiple weather APIs to ensure accurate and up-to-date information. Implemented geolocation for automatic local weather display.",
+    image:
+      "/placeholder.svg?height=300&width=600&text=Weather+Forecast+Dashboard",
+    technologies: ["React", "Redux", "OpenWeatherMap API", "Chart.js"],
+    githubUrl: "#",
+    liveUrl: "#",
+  },
+  {
+    id: "project5",
+    title: "Weather Forecast Dashboard",
+    description: "A dynamic weather forecasting tool",
+    longDescription:
+      "Engineered a weather dashboard that provides real-time weather data and forecasts. Integrated with multiple weather APIs to ensure accurate and up-to-date information. Implemented geolocation for automatic local weather display.",
+    image:
+      "/placeholder.svg?height=300&width=600&text=Weather+Forecast+Dashboard",
+    technologies: ["React", "Redux", "OpenWeatherMap API", "Chart.js"],
+    githubUrl: "#",
+    liveUrl: "#",
+  },
 ];
 
 const page = () => {
@@ -120,6 +144,14 @@ const page = () => {
           ))}
         </div>
       </main>
+
+      <footer className="bg-muted py-6 mt-12">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-sm text-muted-foreground">
+            &copy; {new Date().getFullYear()} Your Name. All rights reserved.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
