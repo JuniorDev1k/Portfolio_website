@@ -220,6 +220,36 @@ export default function Home() {
           </Card>
         </section>
       </main>
+      <footer className="bg-muted py-6">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-sm text-muted-foreground">
+            &copy; {new Date().getFullYear()} Your Name. All rights reserved.
+          </p>
+          <div className="flex space-x-4 mt-4 md:mt-0">
+            <Link
+              href="#"
+              className="text-muted-foreground hover:text-foreground"
+            >
+              <span className="sr-only">GitHub</span>
+              <Github className="w-6 h-6" />
+            </Link>
+            <Link
+              href="#"
+              className="text-muted-foreground hover:text-foreground"
+            >
+              <span className="sr-only">LinkedIn</span>
+              <Linkedin className="w-6 h-6" />
+            </Link>
+            <Link
+              href="#"
+              className="text-muted-foreground hover:text-foreground"
+            >
+              <span className="sr-only">Email</span>
+              <Mail className="w-6 h-6" />
+            </Link>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
