@@ -1,4 +1,7 @@
 import React from "react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 
 type Project = {
   id: string;
@@ -49,7 +52,23 @@ const projects: Project[] = [
 ];
 
 const page = () => {
-  return <div>page</div>;
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <header className="sticky top-0 z-10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
+          <Link href="/" className="text-2xl font-bold">
+            Your Name
+          </Link>
+          <Link href="/">
+            <Button variant="ghost">
+              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Home
+            </Button>
+          </Link>
+        </nav>
+      </header>
+      ;
+    </div>
+  );
 };
 
 export default page;
