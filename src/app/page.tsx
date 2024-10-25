@@ -1,5 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -17,6 +25,37 @@ export default function Home() {
     "REST API",
     "Mysql",
     "Git",
+  ];
+
+  const projects = [
+    {
+      title: "Marketing Agency",
+      image: "",
+      description: "marketing agency loschmedia",
+      liveUrl: "https://www.loshmedia.com",
+      githubUrl: "https://www.loshmedia.com",
+    },
+    {
+      title: "Marketing Agency",
+      image: "",
+      description: "marketing agency loschmedia",
+      liveUrl: "https://www.loshmedia.com",
+      githubUrl: "https://www.loshmedia.com",
+    },
+    {
+      title: "Marketing Agency",
+      image: "",
+      description: "marketing agency loschmedia",
+      liveUrl: "https://www.loshmedia.com",
+      githubUrl: "https://www.loshmedia.com",
+    },
+    {
+      title: "Marketing Agency",
+      image: "",
+      description: "marketing agency loschmedia",
+      liveUrl: "https://www.loshmedia.com",
+      githubUrl: "https://www.loshmedia.com",
+    },
   ];
 
   return (
@@ -95,6 +134,39 @@ export default function Home() {
                 className="flex items-center justify-center p-4"
               >
                 <CardContent className="text-center">{skill}</CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+        <section id="projects" className="py-12 md:py-24 lg:py-32">
+          <h2 className="text-3xl font-bold mb-8 text-center">Projects</h2>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {projects.map((project, index) => (
+              <Card key={index}>
+                <CardHeader>
+                  <CardTitle>{project.title}</CardTitle>
+                  <CardDescription>{project.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  {/* <Image
+                    src={project.image}
+                    width={400}
+                    height={200}
+                    alt={`${project.title} screenshot`}
+                    className="w-full h-48 object-cover rounded-md"
+                  /> */}
+                </CardContent>
+                <CardFooter className="flex justify-between">
+                  <Button variant="outline" asChild>
+                    <Link href={project.liveUrl}>View Project</Link>
+                  </Button>
+                  <Button variant="outline" asChild>
+                    <Link href={project.githubUrl}>
+                      <Github className="w-4 h-4 mr-2" />
+                      GitHub
+                    </Link>
+                  </Button>
+                </CardFooter>
               </Card>
             ))}
           </div>
