@@ -1,4 +1,7 @@
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+
 import {
   Card,
   CardContent,
@@ -170,6 +173,51 @@ export default function Home() {
               </Card>
             ))}
           </div>
+        </section>
+        <section id="contact" className="py-12 md:py-24 lg:py-32">
+          <h2 className="text-3xl font-bold mb-8 text-center">Get in Touch</h2>
+          <Card className="max-w-md mx-auto">
+            <CardHeader>
+              <CardTitle>Contact Me</CardTitle>
+              <CardDescription>
+                Fill out the form below to send me a message.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <form className="space-y-4">
+                <div className="space-y-2">
+                  <label
+                    htmlFor="name"
+                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                  >
+                    Name
+                  </label>
+                  <Input id="name" placeholder="Your name" />
+                </div>
+                <div className="space-y-2">
+                  <label
+                    htmlFor="email"
+                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                  >
+                    Email
+                  </label>
+                  <Input id="email" type="email" placeholder="Your email" />
+                </div>
+                <div className="space-y-2">
+                  <label
+                    htmlFor="message"
+                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                  >
+                    Message
+                  </label>
+                  <Textarea id="message" placeholder="Your message" />
+                </div>
+                <Button type="submit" className="w-full">
+                  Send Message
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
         </section>
       </main>
     </div>
