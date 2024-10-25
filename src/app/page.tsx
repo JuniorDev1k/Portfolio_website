@@ -66,7 +66,7 @@ export default function Home() {
       <header className="sticky top-0 z-10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold">
-            Your Name
+            Ayoub.BK
           </Link>
           <ul className="flex space-x-4">
             <li>
@@ -123,6 +123,7 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
+              <div className="h-[400px] w-[400px] rounded-md border-2 shadow-md  "></div>
             </div>
           </div>
         </section>
