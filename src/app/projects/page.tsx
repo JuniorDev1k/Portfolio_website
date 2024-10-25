@@ -1,7 +1,15 @@
-import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Github, ArrowLeft } from "lucide-react";
 
 type Project = {
   id: string;
@@ -66,7 +74,52 @@ const page = () => {
           </Link>
         </nav>
       </header>
-      ;
+      <main className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-8 text-center">My Projects</h1>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project) => (
+            <Card key={project.id} className="flex flex-col">
+              <CardHeader>
+                <CardTitle>{project.title}</CardTitle>
+                <CardDescription>{project.description}</CardDescription>
+              </CardHeader>
+              <CardContent className="flex-grow">
+                {/* <Image
+                  src={project.image}
+                  width={600}
+                  height={300}
+                  alt={`${project.title} screenshot`}
+                  className="w-full h-48 object-cover rounded-md mb-4"
+                /> */}
+                <p className="text-sm text-muted-foreground mb-4">
+                  {project.longDescription}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </CardContent>
+              <CardFooter className="flex justify-between">
+                <Button variant="outline" asChild>
+                  <Link href={project.liveUrl}>View Live</Link>
+                </Button>
+                <Button variant="outline" asChild>
+                  <Link href={project.githubUrl}>
+                    <Github className="w-4 h-4 mr-2" />
+                    GitHub
+                  </Link>
+                </Button>
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
+      </main>
     </div>
   );
 };
