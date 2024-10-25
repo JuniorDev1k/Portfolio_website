@@ -1,8 +1,24 @@
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+  const skills = [
+    "React",
+    "TypeScript",
+    "Next.js",
+    "Tailwind",
+    "Express",
+    "Python",
+    "MongoDB",
+    "DaisyUI",
+    "REST API",
+    "Mysql",
+    "Git",
+  ];
+
   return (
     <div className="min-h-screen  ">
       <header className="sticky top-0 z-10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -66,6 +82,21 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+        <section id="skills" className="py-12 md:py-24 lg:py-32">
+          <h2 className="text-3xl font-bold mb-8 text-center">
+            Skills & Technologies
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 items-center">
+            {skills.map((skill) => (
+              <Card
+                key={skill}
+                className="flex items-center justify-center p-4"
+              >
+                <CardContent className="text-center">{skill}</CardContent>
+              </Card>
+            ))}
           </div>
         </section>
       </main>
