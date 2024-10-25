@@ -34,6 +34,41 @@ export default function Home() {
           </ul>
         </nav>
       </header>
+      <main className="container mx-auto px-4 py-8">
+        <section className="py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6">
+            <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+              {/* <Image
+                src=""
+                width={400}
+                height={400}
+                alt="Your profile picture"
+                className="mx-auto aspect-square overflow-hidden rounded-xl object-cover sm:w-full lg:order-last"
+              /> */}
+              <div className="flex flex-col justify-center space-y-4">
+                <div className="space-y-2">
+                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                    Hi, I'm Ayoub !
+                  </h1>
+                  <p className="max-w-[700px] text-muted-foreground md:text-xl">
+                    I’m a Front-End Developer who enjoys creating vibrant,
+                    user-friendly websites that blend creativity and
+                    functionality for a great online experience
+                  </p>
+                </div>
+                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                  <Link href="#contact">
+                    <Button>Get in touch</Button>
+                  </Link>
+                  <Link href="#projects">
+                    <Button variant="outline">View my work</Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   );
 }
