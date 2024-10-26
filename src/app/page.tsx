@@ -12,11 +12,13 @@ import {
 import { Github, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Project, Projects } from "../data";
 
 export default function Home() {
   const skills = [
     "React",
     "TypeScript",
+    "Javascript",
     "Next.js",
     "Tailwind",
     "Express",
@@ -26,37 +28,6 @@ export default function Home() {
     "REST API",
     "Mysql",
     "Git",
-  ];
-
-  const projects = [
-    {
-      title: "Marketing Agency",
-      image: "/imgs/loschmedia.png",
-      description: "marketing agency loschmedia",
-      liveUrl: "https://www.loshmedia.com",
-      githubUrl: "https://www.loshmedia.com",
-    },
-    {
-      title: "Ecommerce APP",
-      image: "/imgs/gamevab.png",
-      description: "marketing agency loschmedia",
-      liveUrl: "https://www.loshmedia.com",
-      githubUrl: "https://www.loshmedia.com",
-    },
-    {
-      title: "fibonacci time",
-      image: "/imgs/fibo.png",
-      description: "marketing agency loschmedia",
-      liveUrl: "https://www.loshmedia.com",
-      githubUrl: "https://www.loshmedia.com",
-    },
-    {
-      title: "porftolio website",
-      image: "/imgs/loschmedia.png",
-      description: "marketing agency loschmedia",
-      liveUrl: "https://www.loshmedia.com",
-      githubUrl: "https://www.loshmedia.com",
-    },
   ];
 
   return (
@@ -117,12 +88,11 @@ export default function Home() {
 
             {/* Right Photo */}
             <div className="flex items-center h-full ">
-              <div className="  h-[400px] sm:w-[400px] sm:h-[400px] md:h-[500px]  w-[80%]  ">
-                {/* Adjust max-width and height */}
+              <div className="h-[400px] sm:w-[500px] sm:h-[400px] md:h-[500px] w-[80%]  ">
                 <img
-                  src="/imgs/heeroo.jfif"
+                  src="/imgs/hero.jfif"
                   alt="my-picture"
-                  className="h-full w-full rounded-md object-c"
+                  className="h-full w-full rounded-md object-bottom"
                 />
               </div>
             </div>
@@ -136,7 +106,7 @@ export default function Home() {
             {skills.map((skill) => (
               <Card
                 key={skill}
-                className="flex items-center justify-center p-4"
+                className="flex items-center justify-center p-4 hover:bg-black hover:text-white hover:font-bold transition-all duration-200  "
               >
                 <CardContent className="text-center">{skill}</CardContent>
               </Card>
@@ -146,35 +116,37 @@ export default function Home() {
         <section id="projects" className="py-12 md:py-24 lg:py-32">
           <h2 className="text-3xl font-bold mb-8 text-center">Projects</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {projects.map((project, index) => (
-              <Card key={index}>
-                <CardHeader>
-                  <CardTitle>{project.title}</CardTitle>
-                  <CardDescription>{project.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  {
-                    <Image
-                      src={project.image}
-                      width={400}
-                      height={200}
-                      alt={`${project.title} screenshot`}
-                      className="w-full h-48 object-cover rounded-md"
-                    />
-                  }
-                </CardContent>
-                <CardFooter className="flex justify-between">
-                  <Button variant="outline" asChild>
-                    <Link href={project.liveUrl}>View Project</Link>
-                  </Button>
-                  <Button variant="outline" asChild>
-                    <Link href={project.githubUrl}>
-                      <Github className="w-4 h-4 mr-2" />
-                      GitHub
-                    </Link>
-                  </Button>
-                </CardFooter>
-              </Card>
+            {Projects.map((project: Project, index: number) => (
+              <Link href="/projects" key={project.id}>
+                <Card className="hover:shadow-lg transition-all duration-100    ">
+                  <CardHeader>
+                    <CardTitle>{project.title}</CardTitle>
+                    <CardDescription>{project.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    {
+                      <Image
+                        src={project.image}
+                        width={400}
+                        height={200}
+                        alt={`${project.title} screenshot`}
+                        className="w-full h-48 object-cover rounded-md"
+                      />
+                    }
+                  </CardContent>
+                  <CardFooter className="flex justify-between">
+                    <Button variant="outline" asChild>
+                      <Link href={project.liveUrl}>View Project</Link>
+                    </Button>
+                    <Button variant="outline" asChild>
+                      <Link href={project.githubUrl}>
+                        <Github className="w-4 h-4 mr-2" />
+                        GitHub
+                      </Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </Link>
             ))}
           </div>
         </section>
