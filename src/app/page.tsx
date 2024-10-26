@@ -239,11 +239,13 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-8 text-center">Projects</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {Projects.map((project: Project, index: number) => (
-              <Link href="/projects" key={project.id}>
+              <Link href={`/projects/${project.id}`} key={project.id}>
                 <Card className="hover:shadow-lg transition-all duration-100    ">
                   <CardHeader>
                     <CardTitle>{project.title}</CardTitle>
-                    <CardDescription>{project.description}</CardDescription>
+                    <CardDescription>
+                      {project.shortDescription}
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
                     {
@@ -258,7 +260,7 @@ export default function Home() {
                   </CardContent>
                   <CardFooter className="flex justify-between">
                     <Button variant="outline" asChild>
-                      <Link href={project.liveUrl}>View Project</Link>
+                      <Link href={`/projects/${project.id}`}>View Project</Link>
                     </Button>
                     <Button variant="outline" asChild>
                       <Link href={project.githubUrl}>
