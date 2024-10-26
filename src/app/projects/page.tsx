@@ -1,16 +1,15 @@
-// import { StyleSheet, Text, View } from 'react-native'
-// import React from 'react'
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
-// type Props = {}
+const ProjectPage = () => {
+  return (
+    <div className="flex flex-col gap-10 justify-center items-center w-screen h-screen ">
+      <h1 className="text-3xl">Projects Page Coming soom ... </h1>
+      <Link href="/#projects">
+        <Button className="p-8 text-xl ">Go To Projects</Button>
+      </Link>
+    </div>
+  );
+};
 
-// const page = (props: Props) => {
-//   return (
-//     <View>
-//       <Text>page</Text>
-//     </View>
-//   )
-// }
-
-// export default page
-
-// const styles = StyleSheet.create({})
+export default ProjectPage;
