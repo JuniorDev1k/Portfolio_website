@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-
 import {
   Card,
   CardContent,
@@ -11,7 +10,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Github, Linkedin, Mail } from "lucide-react";
-
 import Image from "next/image";
 import Link from "next/link";
 
@@ -33,28 +31,28 @@ export default function Home() {
   const projects = [
     {
       title: "Marketing Agency",
-      image: "",
+      image: "/imgs/loschmedia.png",
       description: "marketing agency loschmedia",
       liveUrl: "https://www.loshmedia.com",
       githubUrl: "https://www.loshmedia.com",
     },
     {
-      title: "Marketing Agency",
-      image: "",
+      title: "Ecommerce APP",
+      image: "/imgs/gamevab.png",
       description: "marketing agency loschmedia",
       liveUrl: "https://www.loshmedia.com",
       githubUrl: "https://www.loshmedia.com",
     },
     {
-      title: "Marketing Agency",
-      image: "",
+      title: "fibonacci time",
+      image: "/imgs/fibo.png",
       description: "marketing agency loschmedia",
       liveUrl: "https://www.loshmedia.com",
       githubUrl: "https://www.loshmedia.com",
     },
     {
-      title: "Marketing Agency",
-      image: "",
+      title: "porftolio website",
+      image: "/imgs/loschmedia.png",
       description: "marketing agency loschmedia",
       liveUrl: "https://www.loshmedia.com",
       githubUrl: "https://www.loshmedia.com",
@@ -93,37 +91,40 @@ export default function Home() {
         </nav>
       </header>
       <main className="container mx-auto px-4 py-8">
-        <section className="py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-              {/* <Image
-                src=""
-                width={400}
-                height={400}
-                alt="Your profile picture"
-                className="mx-auto aspect-square overflow-hidden rounded-xl object-cover sm:w-full lg:order-last"
-              /> */}
-              <div className="flex flex-col justify-center space-y-4">
-                <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                    Hi, I'm Ayoub !
-                  </h1>
-                  <p className="max-w-[700px] text-muted-foreground md:text-xl">
-                    I’m a Front-End Developer who enjoys creating vibrant,
-                    user-friendly websites that blend creativity and
-                    functionality for a great online experience
-                  </p>
-                </div>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Link href="#contact">
-                    <Button>Get in touch</Button>
-                  </Link>
-                  <Link href="#projects">
-                    <Button variant="outline">View my work</Button>
-                  </Link>
-                </div>
+        <section className="py-4 mb-40 sm:mb-0  ">
+          <div className="grid gap-6 lg:justify-between justfity-center  sm:grid-cols-2 h-[60vh] ">
+            {/* Left Description and Title */}
+            <div className="flex flex-col justify-center space-y-4 md:gap-8 ">
+              <div className="space-y-2">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                  Hi, I'm Ayoub!
+                </h1>
+                <p className="max-w-[700px] text-muted-foreground md:text-xl">
+                  I’m a Front-End Developer who enjoys creating vibrant,
+                  user-friendly websites that blend creativity and functionality
+                  for a great online experience.
+                </p>
               </div>
-              <div className="h-[400px] w-[400px] rounded-md border-2 shadow-md  "></div>
+              <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <Link href="#contact">
+                  <Button>Get in touch</Button>
+                </Link>
+                <Link href="#projects">
+                  <Button variant="outline">View my work</Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Photo */}
+            <div className="flex items-center h-full ">
+              <div className="  h-[400px] sm:w-[400px] sm:h-[400px] md:h-[500px]  w-[80%]  ">
+                {/* Adjust max-width and height */}
+                <img
+                  src="/imgs/heeroo.jfif"
+                  alt="my-picture"
+                  className="h-full w-full rounded-md object-c"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -152,13 +153,15 @@ export default function Home() {
                   <CardDescription>{project.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  {/* <Image
-                    src={project.image}
-                    width={400}
-                    height={200}
-                    alt={`${project.title} screenshot`}
-                    className="w-full h-48 object-cover rounded-md"
-                  /> */}
+                  {
+                    <Image
+                      src={project.image}
+                      width={400}
+                      height={200}
+                      alt={`${project.title} screenshot`}
+                      className="w-full h-48 object-cover rounded-md"
+                    />
+                  }
                 </CardContent>
                 <CardFooter className="flex justify-between">
                   <Button variant="outline" asChild>
