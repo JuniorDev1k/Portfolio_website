@@ -76,7 +76,7 @@ export default function Home() {
             <div className="flex items-center h-full ">
               <div className=" relative h-[400px] sm:w-[500px] sm:h-[400px] md:h-[500px] w-[80%]   ">
                 <Image
-                  src="/imgs/hero.jfif"
+                  src="/imgs/heroPic.png"
                   alt="my-picture"
                   fill
                   className="rounded-md "
