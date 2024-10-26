@@ -128,7 +128,7 @@ export const Projects: Project[] = [
 ];
 
 // Skills
-export const Skills = [
+export const Skills: any = [
   {
     name: "React",
 

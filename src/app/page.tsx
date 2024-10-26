@@ -74,12 +74,8 @@ export default function Home() {
 
             {/* Right Photo */}
             <div className="flex items-center h-full ">
-              <div className="h-[400px] sm:w-[500px] sm:h-[400px] md:h-[500px] w-[80%]  ">
-                <img
-                  src="/imgs/hero.jfif"
-                  alt="my-picture"
-                  className="h-full w-full rounded-md object-bottom"
-                />
+              <div className=" relative h-[400px] sm:w-[500px] sm:h-[400px] md:h-[500px] w-[80%]  ">
+                <Image src="/imgs/hero.jfif" alt="my-picture" layout="fill" />
               </div>
             </div>
           </div>
