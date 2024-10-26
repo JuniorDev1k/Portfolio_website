@@ -13,7 +13,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Project, Projects } from "../data";
-import { Skills } from "../data";
+import { Skills, skilltype } from "../data";
 
 export default function Home() {
   return (
@@ -54,10 +54,10 @@ export default function Home() {
             <div className="flex flex-col justify-center space-y-4 md:gap-8 ">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                  Hi, I'm Ayoub!
+                  Hi, I &#39;m Ayoub!
                 </h1>
                 <p className="max-w-[700px] text-muted-foreground md:text-xl">
-                  I’m a Front-End Developer who enjoys creating vibrant,
+                  I&#39;m a Front-End Developer who enjoys creating vibrant,
                   user-friendly websites that blend creativity and functionality
                   for a great online experience.
                 </p>
@@ -74,8 +74,13 @@ export default function Home() {
 
             {/* Right Photo */}
             <div className="flex items-center h-full ">
-              <div className=" relative h-[400px] sm:w-[500px] sm:h-[400px] md:h-[500px] w-[80%]  ">
-                <Image src="/imgs/hero.jfif" alt="my-picture" layout="fill" />
+              <div className=" relative h-[400px] sm:w-[500px] sm:h-[400px] md:h-[500px] w-[80%]   ">
+                <Image
+                  src="/imgs/hero.jfif"
+                  alt="my-picture"
+                  fill
+                  className="rounded-md "
+                />
               </div>
             </div>
           </div>
@@ -85,7 +90,7 @@ export default function Home() {
             Skills & Technologies
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 items-center">
-            {Skills.map((skill: any) => (
+            {Skills.map((skill: skilltype) => (
               <Card
                 key={skill.name}
                 className="flex items-center justify-center p-4 hover:shadow-md hover:text-white hover:text-bold transition-all duration-100"
@@ -103,7 +108,7 @@ export default function Home() {
         <section id="projects" className="py-12 md:py-24 lg:py-32">
           <h2 className="text-3xl font-bold mb-8 text-center">Projects</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {Projects.map((project: Project, index: number) => (
+            {Projects.map((project: Project) => (
               <Link href={`/projects/${project.id}`} key={project.id}>
                 <Card className="hover:shadow-lg transition-all duration-100    ">
                   <CardHeader>

@@ -128,7 +128,15 @@ export const Projects: Project[] = [
 ];
 
 // Skills
-export const Skills: any = [
+
+export type skilltype = {
+  name: string;
+  viewBox: string;
+  fill: string;
+  d: string;
+};
+
+export const Skills: skilltype[] = [
   {
     name: "React",
 
