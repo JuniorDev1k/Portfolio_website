@@ -21,7 +21,7 @@ export const Projects: Project[] = [
     liveUrl: "https://gamevabe.web.app",
     githubUrl: "https://github.com/JuniorDev1k/Ecommerce-web-app",
 
-    shortDescription: "Ecommerce website selling gaming products",
+    shortDescription: "Ecommerce website  selling gaming products ",
     longDescription:
       "I developed a dynamic ecommerce web application specializing in gaming products using React for the frontend and Firebase for backend",
     technologies: [
@@ -84,7 +84,7 @@ export const Projects: Project[] = [
     githubUrl: "https://github.com/JuniorDev1k/Fibonaccci-Clock",
 
     shortDescription:
-      "SPA displays A unique clock that tells time using Fibonacci sequences and vibrant colored squares for a visual twist",
+      " A unique clock that tells time using Fibonacci sequences ",
     longDescription:
       " Check out the Fibonacci Clock! It shows time with colorful squares arranged in Fibonacci sequences. It's a fun and quirky way to tell time, combining Math with Coding ,I Created this program to develop and practice problem solving and algorithms , ( Green for minutes , Red for Hours , Blue for Both  , minutes / 5 =  colored minutes) ",
     technologies: ["React", "Javascript", "Css"],
