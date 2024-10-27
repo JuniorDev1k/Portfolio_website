@@ -49,14 +49,14 @@ export default function Home() {
       </header>
       <main className="container mx-auto px-4 py-8">
         <section className="py-4 mb-40 sm:mb-0  ">
-          <div className="grid gap-6 lg:justify-between justfity-center  sm:grid-cols-2 h-[60vh] ">
+          <div className="grid gap-6 lg:justify-between justfity-center items-center  sm:grid-cols-2">
             {/* Left Description and Title */}
-            <div className="flex flex-col justify-center space-y-4 md:gap-8 ">
-              <div className="space-y-2">
+            <div className="flex flex-col justify-center space-y-4 md:gap-8 text-center items-center ">
+              <div className="space-y-2 flex flex-col gap-2 ">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                   Hi, I &#39;m Ayoub!
                 </h1>
-                <p className="max-w-[700px] text-muted-foreground md:text-xl">
+                <p className="max-w-[700px] text-muted-foreground md:text-xl ">
                   I&#39;m a Front-End Developer who enjoys creating vibrant,
                   user-friendly websites that blend creativity and functionality
                   for a great online experience.
@@ -73,13 +73,13 @@ export default function Home() {
             </div>
 
             {/* Right Photo */}
-            <div className="flex items-center h-full ">
-              <div className=" relative h-[400px] sm:w-[500px] sm:h-[400px] md:h-[500px] w-[80%]   ">
+            <div className="flex items-center h-full  justify-center">
+              <div className="relative h-[400px] sm:w-[500px] sm:h-[400px] md:h-[500px] w-[80%]   ">
                 <Image
                   src="/imgs/heroPic.png"
                   alt="my-picture"
                   fill
-                  className="rounded-md "
+                  className="rounded-md hover:scale-[1.02] transform transition-all duration-200  hover:shadow-md "
                 />
               </div>
             </div>
