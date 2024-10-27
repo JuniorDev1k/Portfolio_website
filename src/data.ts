@@ -36,20 +36,24 @@ export const Projects: Project[] = [
     challenges: [
       "I implemented authentication (email and Google) Firestore for database design & logic Firebase Storage for image storage",
       "Leveraging React hooks and Context API ensured efficient data fetching and state management",
-      "interactive dashboard for admin",
+      "interactive dashboard for admin ",
     ],
-    solutions: ["Using Daisy Components ", "Responsive design"],
+    solutions: [
+      "Using Daisy Components ",
+      "Responsive design",
+      "(/admin to add product)",
+    ],
     learnings: [
       "Styling layouts",
-      "hanlding users & products logic",
-      "admin dashboard",
-      "Hanling the filtering Logic ",
+      "Handling users & products logic",
+      "Admin dashboard",
+      "Handling the filtering Logic ",
     ],
     futureImprovements: [
-      "optimizing load time & images",
+      "Optimizing load time & images",
       "Responsive design",
       "Adding a Guest User",
-      "using zustand for state mangment",
+      "Using zustand for state mangment",
     ],
   },
   {
@@ -59,13 +63,13 @@ export const Projects: Project[] = [
     liveUrl: "https://www.loshmedia.com",
     githubUrl: "https://github.com/JuniorDev1k/LoschMedia_Agency",
 
-    shortDescription: "Website for a B2B aquicition marketing agency ",
+    shortDescription: "Website for a B2B Acquisition marketing agency ",
     longDescription:
-      "I developed an interactive & resposive website for a marketing agency that showcase their work and have an online presense that describes the whole agency profile with the ability of booking an apoitment",
+      "I developed an interactive & resposive website for a marketing agency that showcase their work and an online presense that describes the whole agency profile with the ability of booking an apoitment",
     technologies: ["React", "Tailwind", "FramerMotion"],
-    challenges: [""],
-    solutions: [""],
-    learnings: ["Styling layouts", "Resuable components", "Design principles"],
+    challenges: ["Multitaksing", "Working under pressure for the deadline"],
+    solutions: ["Deep Work Sessions", "Using Tools & Libraries "],
+    learnings: ["Styling layouts", "Reusable components", "Design principles"],
     futureImprovements: [
       "Page for All testimonials",
       "Smooth scrolling + additional animations",
@@ -79,28 +83,29 @@ export const Projects: Project[] = [
     liveUrl: "https://fibonaccciclock.vercel.app",
     githubUrl: "https://github.com/JuniorDev1k/Fibonaccci-Clock",
 
-    shortDescription: "SPA that displays current time in a fibonacci form ",
+    shortDescription:
+      "SPA displays A unique clock that tells time using Fibonacci sequences and vibrant colored squares for a visual twist",
     longDescription:
-      "I Created this program to develop and practice problem solving and algorithms so i build this app that displays the current time in a fibonacci form [1,1,2,3,5] by coloing the sqaures : ( Green for Minutes  , Red for Hours  , Blue for both  ) minutes = current minuteTime / 5 ",
+      " Check out the Fibonacci Clock! It shows time with colorful squares arranged in Fibonacci sequences. It's a fun and quirky way to tell time, combining Math with Coding ,I Created this program to develop and practice problem solving and algorithms , ( Green for minutes , Red for Hours , Blue for Both  , minutes / 5 =  colored minutes) ",
     technologies: ["React", "Javascript", "Css"],
     challenges: [
-      " Finding the combination of the number ( hours and minute ) by [1,1,2,3,5] ",
+      "Finding the combination of the number ( hours and minute ) by [1,1,2,3,5] ",
       "logic for coloring the squares",
       "dealing with the number 1 as a unique identifier ",
     ],
     solutions: [
-      "using the Combination Sum algorithm",
+      "Using the Combination Sum algorithm",
       "Recursive funtion",
       "comparing H & M combination and giving each number unique identifier",
     ],
     learnings: [
-      "implementing recursive function",
+      "Recursive function",
       "problem solving from math to coding",
       "dynamic programming",
     ],
     futureImprovements: [
-      "mybe update the UI",
-      "optimizing for a lower Complexity",
+      "Maybe update the UI",
+      "Optimizing for a lower Complexity",
       "Additional Feature",
     ],
   },
@@ -111,17 +116,18 @@ export const Projects: Project[] = [
     liveUrl: "https://www.loshmedia.com",
     githubUrl: "https://github.com/JuniorDev1k/Portfolio_website",
 
-    shortDescription: "Portfolio Website to show my work & knowledge",
+    shortDescription:
+      "Ayoub.BK's portfolio showcases innovative web projects, technical skills, and a dedication to delivering impactful digital solutions",
     longDescription:
-      "simple portfolio website built with typscript , nextjs, the beauty of shadcn is just amazing, makes it easy and good apealing design . to show my work and my skills   ",
+      "My portfolio gives you a glimpse into my favorite projects, tech skills, and creative approach to crafting digital experiences that look great and work smoothly",
     technologies: ["Nextjs", "Typescript", "TailwindCss", "ShadCN"],
-    challenges: [""],
-    solutions: [""],
-    learnings: [""],
+    challenges: ["Some Deployment Issues "],
+    solutions: ["Fixed Vercel Deployment Issues"],
+    learnings: ["Documenting Projects", "Showcasing my skills"],
     futureImprovements: [
       "New Creative Design",
       "Adding Certificates Section",
-      "Adding Work Experince (if i get a job)",
+      "Adding Work Experince eventually",
       "Blog to share my ideas",
     ],
   },

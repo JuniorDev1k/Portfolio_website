@@ -79,7 +79,7 @@ const ProjectPage = () => {
             </CardContent>
           </Card>
 
-          <Tabs defaultValue="phases" className="mb-8">
+          <Tabs defaultValue="challenges" className="mb-8  ">
             <TabsList>
               <TabsTrigger value="challenges">
                 Challenges & Solutions
@@ -173,7 +173,7 @@ const ProjectPage = () => {
       <footer className="bg-muted py-6 mt-12">
         <div className="container mx-auto px-4 text-center">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Your Name. All rights reserved.
+            &copy; {new Date().getFullYear()} Ayoub.BK , All rights reserved.
           </p>
         </div>
       </footer>

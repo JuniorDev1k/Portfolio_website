@@ -150,7 +150,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-8 text-center">
             Skills & Technologies
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 items-center	 border-2 ">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 items-center ">
             {Skills.map((skill: skilltype) => (
               <Card
                 key={skill.name}
@@ -171,7 +171,7 @@ export default function Home() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {Projects.map((project: Project) => (
               <Link href={`/projects/${project.id}`} key={project.id}>
-                <Card className="hover:shadow-lg transition-all duration-100    ">
+                <Card className="hover:shadow-lg transition-all duration-100  h-full  ">
                   <CardHeader>
                     <CardTitle>{project.title}</CardTitle>
                     <CardDescription>
