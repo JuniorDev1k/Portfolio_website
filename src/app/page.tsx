@@ -150,7 +150,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-8 text-center">
             Skills & Technologies
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 items-center">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 items-center	 border-2 ">
             {Skills.map((skill: skilltype) => (
               <Card
                 key={skill.name}
