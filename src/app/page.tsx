@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -10,41 +11,97 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Github, Linkedin, Mail } from "lucide-react";
+import { Menu } from "lucide-react";
+import { X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Project, Projects } from "../data";
 import { Skills, skilltype } from "../data";
 
+import { useState } from "react";
+
 export default function Home() {
+  const [toggle, setToggle] = useState(false);
   return (
     <div className="min-h-screen  ">
       <header className="sticky top-0 z-10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
+        <nav className="container mx-auto px-4 py-4 flex justify-between items-center  ">
           <Link href="/" className="text-2xl font-bold">
             Ayoub.BK
           </Link>
-          <ul className="flex space-x-4">
+          <button onClick={() => setToggle(!toggle)}>
+            <Menu className="w-10 h-6 md:hidden " />
+          </button>
+
+          <ul className="md:flex gap-6 p-2 items-center hidden ">
             <li>
-              <Link href="#" className="hover:underline">
+              <Link href="#" className="hover:border-b-2">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="#projects" className="hover:underline">
+              <Link href="#projects" className="hover:border-b-2">
                 Projects
               </Link>
             </li>
             <li>
-              <Link href="#skills" className="hover:underline">
+              <Link href="#skills" className="hover:border-b-2">
                 Skills
               </Link>
             </li>
-            <li>
-              <Link href="#contact" className="hover:underline">
-                Contact
+            <li className="">
+              <Link href="#contact">
+                <Button>Get in touch</Button>
               </Link>
             </li>
           </ul>
+
+          <div
+            className={`z-50 bg-white fixed inset-0 md:hidden h-screen flex   transform transition-transform duration-500 ease-in-out ${
+              toggle ? "translate-x-0" : "translate-x-full"
+            }`}
+          >
+            <ul className="relative flex flex-col gap-10 p-4 items-center  w-full border-2 text-xl ">
+              <li>
+                <X
+                  onClick={() => setToggle(false)}
+                  className={`w-10 h-7  absolute top-2 right-2`}
+                />
+              </li>
+              <li>
+                <Link
+                  onClick={() => setToggle(false)}
+                  href="#"
+                  className="hover:border-b-2  "
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  onClick={() => setToggle(false)}
+                  href="#projects"
+                  className="hover:border-b-2  "
+                >
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link
+                  onClick={() => setToggle(false)}
+                  href="#skills"
+                  className="hover:border-b-2 "
+                >
+                  Skills
+                </Link>
+              </li>
+              <li className="">
+                <Link onClick={() => setToggle(false)} href="#contact">
+                  <Button>Get in touch</Button>
+                </Link>
+              </li>
+            </ul>
+          </div>
         </nav>
       </header>
       <main className="container mx-auto px-4 py-8">
@@ -63,11 +120,15 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <Link href="#contact">
-                  <Button>Get in touch</Button>
-                </Link>
                 <Link href="#projects">
                   <Button variant="outline">View my work</Button>
+                </Link>
+                <Link
+                  href="/document/Resumi.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button>Download Resumi</Button>
                 </Link>
               </div>
             </div>
