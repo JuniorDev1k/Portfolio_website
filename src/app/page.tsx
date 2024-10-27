@@ -10,6 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Github, Linkedin } from "lucide-react";
 import { Menu } from "lucide-react";
 import { X } from "lucide-react";
 import Image from "next/image";
